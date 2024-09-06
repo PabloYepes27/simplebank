@@ -14,5 +14,7 @@ stopcontainer:
 	docker stop postgres16
 sqlc:
 	sqlc generate
+test:
+	go test -v -cover ./...
 
-.PHONY: postgres createdb dropdb migrateup migratedown startcontainer stopcontainer sqlc
+.PHONY: postgres createdb dropdb migrateup migratedown startcontainer stopcontainer sqlc test
